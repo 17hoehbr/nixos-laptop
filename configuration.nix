@@ -63,7 +63,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-#  # Enable the GNOME Desktop Environment.
+  # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
@@ -72,7 +72,6 @@
     gnome-tour
   ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
-#    nautilus
     gnome-music
     epiphany # web browser
     geary # email reader
@@ -130,7 +129,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    # cinnamon.nemo
     wget
     gparted
     git
@@ -145,11 +143,10 @@
     virt-manager
     cifs-utils
     docker-compose
-    libsForQt5.kwin-dynamic-workspaces
     appimage-run
-    # gnomeExtensions.appindicator
-    # gnome-extension-manager
-    # gnome.gnome-tweaks
+    gnomeExtensions.appindicator
+    gnome-extension-manager
+    gnome.gnome-tweaks
     usbutils
     steam-run
   ];
